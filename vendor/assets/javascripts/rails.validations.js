@@ -55,7 +55,6 @@
   validatorsFor = function(name, validators) {
     var captures, validator, validator_name;
     name = name.replace(/\[((?:new_)?\d+|[0-9a-f]{24})\]/g, "[]");
-    }
     return validators[name] || {};
   };
 
