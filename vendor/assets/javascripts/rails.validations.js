@@ -57,9 +57,7 @@
     if (captures = name.match(/\[(\w+_attributes)\].*\[(\w+)\]$/)) {
       for (validator_name in validators) {
         validator = validators[validator_name];
-        if (validator_name.match("\\[" + captures[1] + "\\].*\\[\\]\\[" + captures[2] + "\\]$")) {
-          name = name.replace(/\[((?:new_)?\d+|[0-9a-f]{24})\]/g, "[]");
-        }
+        name = name.replace(/\[((?:new_)?\d+|[0-9a-f]{24})\]/g, "[]");
       }
     }
     return validators[name] || {};
